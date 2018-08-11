@@ -72,6 +72,9 @@ app.get("/", function(req, res) {
 app.get("/reserve", function(req, res) {
   res.sendFile(path.join(__dirname, "add.html"));
 });
+app.get("/tables", function(req, res) {
+  res.sendFile(path.join(__dirname, "view.html"));
+});
 
 app.get("/api/tables", function(req, res) {
   return res.json(tables);
@@ -126,5 +129,5 @@ app.post("/api/tables", function(req, res) {
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
-  console.log("App restaurant listening on PORT " + PORT);
+  console.log("App rest listening on PORT " + PORT);
 });
